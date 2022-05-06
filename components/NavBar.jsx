@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <div className='w-full flex justify-between p-8'>
         <div>
-            Logo
+            <img src="/static/images/logo_text_right.png" alt=""  className='h-20'/>
         </div>
         <div>
             Ham

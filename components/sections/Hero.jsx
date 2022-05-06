@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <div className="h-[70vh] sm:h-[60vh] grid place-items-center mx-auto text-center w-full px-8">
             <div className="flex flex-col items-center gap-8 md:w-3/4">
-                <div className="text-4xl sm:text-7xl font-bold font-pop">
+                <div className="text-4xl xl:text-6xl font-bold font-pop">
                     Changing India Together
                 </div>
                 <div className="text-base sm:text-lg font-light font-sora">
