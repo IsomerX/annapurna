@@ -1,5 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
+import {
+    createUserWithEmailAndPassword,
+    signInWithPopup,
+    GoogleAuthProvider,
+} from "firebase/auth";
+import { auth, provider } from "../../firebase";
 
 const Login = () => {
     const [name, setName] = useState("");
@@ -8,6 +14,32 @@ const Login = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
+        console.log(email, password);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                console.log("You are registered", userCredential);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
+    const googleHandler = (e) => {
+        e.preventDefault();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const credential =
+                    GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                const user = result.user;
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                const email = error.email;
+                const credential =
+                    GoogleAuthProvider.credentialFromError(error);
+            });
     };
 
     return (
@@ -27,7 +59,10 @@ const Login = () => {
                     <div className=" h-1 w-[75px] bg-[#F0B09C]"></div>
                     <span className="font-sora text-xl">Sign Up</span>
                 </div>
-                <form className="font-sora flex flex-col gap-4">
+                <form
+                    className="font-sora flex flex-col gap-4"
+                    onSubmit={submitHandler}
+                >
                     <div className="flex justify-between">
                         <div className="flex flex-col w-5/12 gap-2">
                             <label>Name</label>
@@ -42,6 +77,7 @@ const Login = () => {
                             <label>Email</label>
                             <input
                                 className="border-2 border-gray-400 rounded-lg p-2"
+                                type="email"
                                 onChange={(e) => {
                                     setEmail(e.target.value);
                                 }}
@@ -53,6 +89,7 @@ const Login = () => {
                             <label>Password</label>
                             <input
                                 className="border-2 border-gray-400 rounded-lg p-2"
+                                type="password"
                                 onChange={(e) => {
                                     setPassword(e.target.value);
                                 }}
@@ -77,7 +114,7 @@ const Login = () => {
                         alt=""
                         className="h-[40px]"
                     />
-                    <span className="text-center w-full font-semibold">
+                    <span className="text-center w-full font-semibold" onClick={googleHandler}>
                         Sign In With Google
                     </span>
                 </button>
