@@ -30,6 +30,10 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  useEffect(() => {
+    if (isAuthenticated) router.replace("/dashboard");
+  }, [isAuthenticated]);
+
   const submitHandler = async (e) => {
     e.preventDefault();
     await login();
