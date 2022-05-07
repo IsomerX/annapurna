@@ -11,7 +11,7 @@ import React, { useState } from "react";
 // use moralis instead of firebase
 import { useMoralis } from "react-moralis";
 
-const Login = () => {
+const SignUp = () => {
   const { authenticate, isAuthenticated, user } = useMoralis();
   const login = async () => {
     if (!isAuthenticated) {
@@ -57,7 +57,7 @@ const Login = () => {
   return (
     <div className="flex h-[100vh]">
       <div>
-        <img src="/static/images/login.svg" alt="" className="h-[100vh]" />
+        <img src="/static/images/signupBg.png" alt="" className="h-[100vh]" />
       </div>
       <div className="flex flex-col w-5/12 gap-8 py-16 px-16 justify-center">
         {/* <span className="text-5xl font-bold font-pop">
