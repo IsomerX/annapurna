@@ -10,7 +10,7 @@ const NavBar = () => {
             Ham
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default NavBar
