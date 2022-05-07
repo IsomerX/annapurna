@@ -8,10 +8,12 @@ const LandingInfo = () => {
                 <img
                     src="/static/images/bg.png"
                     alt=""
-                    className="w-full min-w-[500px] left-1/2 absolute -translate-x-1/2"
+                    className="w-full min-w-[500px] left-1/2 relative -translate-x-1/2"
                 />
             </div>
-            <div></div>
+            <div>
+
+            </div>
         </div>
     );
 };
