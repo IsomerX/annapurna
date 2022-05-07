@@ -1,29 +1,40 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-import {
-    createUserWithEmailAndPassword,
-    signInWithPopup,
-    GoogleAuthProvider,
-} from "firebase/auth";
-import { auth, provider } from "../../firebase";
+
+// import {
+//     createUserWithEmailAndPassword,
+//     signInWithPopup,
+//     GoogleAuthProvider,
+// } from "firebase/auth";
+// import { auth, provider } from "../../firebase";
+
+// use moralis instead of firebase
+import { useMoralis } from "react-moralis";
 
 const Login = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const { authenticate, isAuthenticated, user } = useMoralis();
+  const login = async () => {
+    if (!isAuthenticated) {
+      await authenticate({ signingMessage: "Continue to Annapurna" })
+        .then(function (user) {
+          console.log(user.get("ethAddress"));
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  };
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        console.log(email, password);
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                console.log("You are registered", userCredential);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    };
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    await login();
+  };
+
+  /*
     const googleHandler = (e) => {
         e.preventDefault();
         signInWithPopup(auth, provider)
@@ -41,18 +52,15 @@ const Login = () => {
                     GoogleAuthProvider.credentialFromError(error);
             });
     };
+*/
 
-    return (
-        <div className="flex h-[100vh]">
-            <div>
-                <img
-                    src="/static/images/login.svg"
-                    alt=""
-                    className="h-[100vh]"
-                />
-            </div>
-            <div className="flex flex-col w-5/12 gap-8 py-16 px-16 justify-center">
-                <span className="text-5xl font-bold font-pop">
+  return (
+    <div className="flex h-[100vh]">
+      <div>
+        <img src="/static/images/login.svg" alt="" className="h-[100vh]" />
+      </div>
+      <div className="flex flex-col w-5/12 gap-8 py-16 px-16 justify-center">
+        {/* <span className="text-5xl font-bold font-pop">
                     Welcome to Annapurna
                 </span>
                 <div className="flex items-center gap-4">
@@ -104,23 +112,25 @@ const Login = () => {
                     <div className="h-0.5 w-[45%] bg-[#00000010]"></div>
                     <span className="text-md font-sora">OR</span>
                     <div className="h-0.5 w-[45%] bg-[#00000010]"></div>
-                </div>
-                <button
-                    className="shadow-md shadow-[#F0987970] flex p-2 items-center rounded-lg font-sora hover:bg-[#F0987911] transition-all"
-                    onClick={submitHandler}
-                >
-                    <img
-                        src="/static/images/google.svg"
-                        alt=""
-                        className="h-[40px]"
-                    />
-                    <span className="text-center w-full font-semibold" onClick={googleHandler}>
-                        Sign In With Google
-                    </span>
-                </button>
-            </div>
-        </div>
-    );
+                </div> 
+                */}
+
+        {!isAuthenticated ? (
+          <button
+            className="shadow-md shadow-[#F0987970] flex p-2 items-center rounded-lg font-sora hover:bg-[#F0987911] transition-all"
+            onClick={submitHandler}
+          >
+            <img src="/static/images/google.svg" alt="" className="h-[40px]" />
+            <span className="text-center w-full font-semibold">
+              Sign Up With MetaMask 🦊
+            </span>
+          </button>
+        ) : (
+          <h2>Continue to dashboard</h2>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Login;
