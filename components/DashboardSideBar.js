@@ -3,7 +3,7 @@ import React from "react";
 const DashboardSideBar = () => {
   return (
     <div className="h-[100vh] min-w-full bg-orange-500 flex">
-      <div className="w-[30%] bg-white flex flex-col">
+      <div className="w-[30%] bg-white flex flex-col border-r-2 border-gray-400">
         {/* <span>logo</span> */}
         <img
           src="/static/images/logo_text_right_3.png"
@@ -49,7 +49,29 @@ const DashboardSideBar = () => {
           </div>
         </div>
       </div>
-      <div className="w-[70%] bg-blue-400">hellps</div>
+      <div className="w-[70%] bg-white flex flex-col">
+        <div className="flex bg-white justify-center gap-40 h-[20%] px-0 py-10">
+          <div>
+            <span className="text-3xl font-medium">
+              Hey Shelly, How are you
+            </span>
+          </div>
+          <div className="flex bg-black py-2 px-6 gap-2 rounded-lg">
+            <img
+              src="/static/images/orange_gem.png"
+              alt=""
+              className="h-[1.75rem]"
+            />
+            <span className="text-lg text-white">6, tokens available</span>
+          </div>
+        </div>
+        <div className="h-[40%] bg-white text-center text-2xl font-medium px-0 py-4">
+          <span className="underline underline-offset-4">
+            Near you carousel
+          </span>
+        </div>
+        <div>Map</div>
+      </div>
     </div>
   );
 };
