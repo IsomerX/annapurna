@@ -4,10 +4,11 @@ import DashboardSideBar from "../../components/DashboardSideBar";
 
 function index() {
   return (
-
-  <DashboardSideBar />
-  <DashboardMainPage/>
-  )
+    <div>
+      <DashboardSideBar />
+      <DashboardMainPage />
+    </div>
+  );
 }
 
 export default index;
