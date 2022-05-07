@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import React, { useState } from "react";
 
 // import {
@@ -126,7 +127,9 @@ const SignUp = () => {
             </span>
           </button>
         ) : (
-          <h2>Continue to dashboard</h2>
+          <Link href="/dashboard">
+            <a>Continue to dashboard</a>
+          </Link>
         )}
       </div>
     </div>
