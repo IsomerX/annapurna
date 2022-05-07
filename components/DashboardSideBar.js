@@ -20,7 +20,7 @@ const DashboardSideBar = () => {
         <span className="mx-auto my-4 font-pop font-bold text-xl">
           Shelly Bakshi
         </span>
-        <div className="option_box flex flex-col gap-8 mx-auto my-10 w-[80%] py-1">
+        <div className="option_box flex flex-col gap-8 mx-auto my-6 w-[80%] py-1">
           <div className="flex gap-6 w-full p-2">
             <img
               src="/static/images/calender_vector.png"
@@ -49,6 +49,7 @@ const DashboardSideBar = () => {
           </div>
         </div>
       </div>
+      <div className="w-[70%] bg-blue-400">hellps</div>
     </div>
   );
 };

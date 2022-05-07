@@ -6,7 +6,7 @@ function index() {
   return (
     <div>
       <DashboardSideBar />
-      <DashboardMainPage />
+      {/* <DashboardMainPage /> */}
     </div>
   );
 }
