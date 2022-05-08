@@ -10,6 +10,7 @@ const Dashboard = () => {
   const [data, setData] = useState([]);
   const [url, setUrl] = useState("");
   const [showUrl, setShowUrl] = useState(false);
+  const [refetch, setRefetch] = useState(0);
 
   const { user } = useMoralis();
 
@@ -41,6 +42,17 @@ const Dashboard = () => {
       const url = `https://ipfs.infura.io/ipfs/${added.path}`;
       setUrl(url);
       setShowUrl(true);
+
+      let temp = data;
+
+      temp.forEach((e, idx) => {
+        if (e.uid === uid) {
+          temp[idx].slots--;
+          return;
+        }
+      });
+      temp = temp.filter((e) => e.slots > 0);
+      setData(temp);
     } catch (error) {
       console.log("Error uploading file: ", error);
     }
@@ -49,11 +61,13 @@ const Dashboard = () => {
   let cards;
 
   if (data.length > 0) {
-    cards = data.map((company) => {
-      return (
-        <LocationCard key={company.id} {...company} clicker={cardHandler} />
-      );
-    });
+    cards = data
+      .filter((e) => e.slots > 0)
+      .map((company) => {
+        return (
+          <LocationCard key={company.id} {...company} clicker={cardHandler} />
+        );
+      });
   } else {
     return (
       <h2 className="h-full w-full mx-auto grid items-center">Loading...</h2>

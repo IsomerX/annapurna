@@ -35,7 +35,7 @@ const Host = () => {
     })
       .then((res) => {
         if (res.ok) {
-          alert("Hsoting created successfully");
+          alert("Hosting created successfully");
           name.current.value = "";
           slots.current.value = "";
           lat.current.value = "";
