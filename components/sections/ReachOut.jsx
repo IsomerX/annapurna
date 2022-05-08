@@ -10,7 +10,7 @@ const ReachOut = () => {
         <img src="/static/images/quotecirc.svg" className="w-20 pb-14" alt="" />
         <div className="px-10">
           <h2 className="text-5xl font-bold font-pop">Reach Out</h2>
-          <p className="pt-10 font-sora">
+          <p className="pt-10 font-sora text-xl">
             According to FAO estimates in 'The State of Food Security and
             Nutrition in the World', 2020 report, 189.2 million people are
             undernourished in India. By this measure, 14% of the population is
@@ -20,11 +20,11 @@ const ReachOut = () => {
           </p>
         </div>
         <Link passHref href="/signup">
-          <div className="flex flex-row gap-2 items-start pt-10 underline text-xl pl-5 cursor-pointer">
+          <div className="flex gap-2 pt-10 underline text-xl pl-5 cursor-pointer items-center">
             <p>Become a part</p>
             <img
               src="/static/images/external link.svg"
-              className="w-4 pb-14 self-center"
+              className="w-4"
               alt="Become a part"
             />
           </div>

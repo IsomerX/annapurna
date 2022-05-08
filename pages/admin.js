@@ -20,7 +20,6 @@ const Admin = () => {
     }
   }, [user]);
 
-  console.log(isAuthenticated);
   return <>{admin ? <h2>Hello admin</h2> : <h2>You are not an admin</h2>}</>;
 };
 

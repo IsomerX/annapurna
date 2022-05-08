@@ -23,9 +23,6 @@ const companyMaker = (name, slots, lat, lng, timing) => {
   });
   temp
     .save()
-    .then((item) => {
-      console.log(item);
-    })
     .catch((err) => console.log(err));
 };
 
@@ -39,7 +36,6 @@ export default function handler(req, response) {
 
   Company.find({}, (err, res) => {
     if (err) response.status(500).json({ status: "error" });
-    console.log(res);
     response.status(200).json({ result: res });
   });
 }
