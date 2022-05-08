@@ -12,8 +12,9 @@ function Index() {
   }, [isAuthenticated]);
 
   return (
-    <div>
-      <DashboardSideBar />
+    <div className="h-[100vh] min-w-full flex">
+      <DashboardSideBar isActive={1}/>
+      <Dashboard />
       {/* <DashboardMainPage /> */}
       <button onClick={logout}>Logout</button>
     </div>
