@@ -26,7 +26,7 @@ const Hero = () => {
                     General Assembly pledged to drastically transform the world
                     by 2030. The Sustainable Development Goals, known as the
                     Global Goals, is a plan to eliminate hunger, fight
-                    inequality, and clean up the planet. Samsung is partnering
+                    inequality, and clean up the planet. Annapurna is partnering
                     with this movement, and we want you to join us in making a
                     difference.
                 </div>
