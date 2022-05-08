@@ -5,7 +5,7 @@ import React from "react";
 
 const NumberCrunch = () => {
     return (
-        <div className="flex flex-col w-full my-0 py-0 flex bg-black">
+        <div className="flex flex-col w-full my-0 py-0 bg-black">
             <div className="pt-20 w-[100%] flex flex-col px-10">
                 <div className="px-10">
                     <h1 className="text-4xl font-bold font-pop text-white">The Number Crunch</h1>
