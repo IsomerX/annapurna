@@ -7,6 +7,7 @@ const company = new schema({
   slots: Number,
   lat: Number,
   lng: Number,
+  timing: String,
 });
 
 const Company = mongoose.model("companies", company);

@@ -29,7 +29,17 @@ const companyMaker = (name, slots, lat, lng, timing) => {
     .catch((err) => console.log(err));
 };
 
-export default function handler(req, res) {
-  companyMaker("dhruv", 22, 33, 33, "8:00AM - 10:00PM");
-  res.status(200).json({ status: "Done" });
+export default function handler(req, response) {
+  mongoose
+    .connect(
+      "mongodb+srv://root:toor@cluster0.uv1pr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    )
+    .then(() => console.log("MongoDB Connected..."))
+    .catch((err) => console.log(err));
+
+  Company.find({}, (err, res) => {
+    if (err) response.status(500).json({ status: "error" });
+    console.log(res);
+    response.status(200).json({ result: res });
+  });
 }

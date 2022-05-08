@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 const Company = require("./model/Company");
 
-const nftMaker = () => {
+const nftMaker = (uid) => {
   mongoose
     .connect(
       "mongodb+srv://root:toor@cluster0.uv1pr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
@@ -10,23 +10,24 @@ const nftMaker = () => {
     .then(() => console.log("MongoDB Connected..."))
     .catch((err) => console.log(err));
 
-  let temp;
-  let temp2;
-  Company.findOne({ uid: 509171811 }, (err, result) => {
-    console.log(result);
-    temp = result.slots;
-    temp2 = result.uid;
-  }).then(() => {
-    if (temp > 1) {
-      Company.updateOne({ uid: 509171811 }, { $set: { slots: temp - 1 } });
-    } else {
-      Company.deleteOne({ uid: 509171811 });
-    }
+  Company.updateOne({ uid }, { $inc: { slots: -1 } }, (err, res) => {
+    if (err) console.log(err);
+    console.log(res);
   });
-  return temp2;
+
+  Company.findOne({ uid }, (err, res) => {
+    if (err) console.log(err);
+    return res;
+  });
+
+  Company.deleteOne({ slots: 0 }, (err, res) => {
+    if (err) console.log(err);
+    console.log(res);
+  });
 };
 
 export default function handler(req, res) {
-  const id = nftMaker();
-  res.status(200).json({ id });
+  const uid = req.query.uid;
+  const response = nftMaker(155550180);
+  res.status(200).json({ response });
 }
