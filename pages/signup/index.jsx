@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import React, { useState } from "react";
+import Router from "next/router";
+import React, { useState, useEffect } from "react";
 
 // import {
 //     createUserWithEmailAndPassword,
@@ -31,7 +32,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   useEffect(() => {
-    if (isAuthenticated) router.replace("/dashboard");
+    if (isAuthenticated) Router.replace("/dashboard");
   }, [isAuthenticated]);
 
   const submitHandler = async (e) => {
