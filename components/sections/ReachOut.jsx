@@ -1,3 +1,4 @@
+import Link from "next/link";
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
@@ -18,17 +19,19 @@ const ReachOut = () => {
             in distribution of food from various sources.
           </p>
         </div>
-        <div className="flex items-center gap-2 pt-10 underline text-xl pl-5">
-          <p>Become a part</p>
-          <img
-            src="/static/images/external link.svg"
-            className="w-4"
-            alt=""
-          />
-        </div>
+        <Link passHref href="/signup">
+          <div className="flex flex-row gap-2 items-start pt-10 underline text-xl pl-5 cursor-pointer">
+            <p>Become a part</p>
+            <img
+              src="/static/images/external link.svg"
+              className="w-4 pb-14 self-center"
+              alt="Become a part"
+            />
+          </div>
+        </Link>
       </div>
       <div className="w-[40%]">
-        <img src="/static/images/hungry-kids.png" className="w-full" alt="" />
+        <img src="/static/images/hungry-kids.png" className="w-full" alt="kids are hungry"/>
       </div>
     </div>
   );
