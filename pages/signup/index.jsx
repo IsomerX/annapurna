@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import Link from "next/link";
+import Router from "next/router";
+import React, { useState, useEffect } from "react";
 
 // import {
 //     createUserWithEmailAndPassword,
@@ -28,6 +30,10 @@ const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    if (isAuthenticated) Router.replace("/dashboard");
+  }, [isAuthenticated]);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -126,7 +132,9 @@ const SignUp = () => {
             </span>
           </button>
         ) : (
-          <h2>Continue to dashboard</h2>
+          <Link href="/dashboard">
+            <a>Continue to dashboard</a>
+          </Link>
         )}
       </div>
     </div>
