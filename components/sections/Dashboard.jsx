@@ -21,7 +21,7 @@ const Dashboard = () => {
       });
   }, []);
 
-  const cardHandler = async (uid, name, timing) => {
+  const cardHandler = async (uid, name, timing, lat, lng) => {
     fetch("/api/hello", {
       method: "POST",
       headers: {
@@ -36,7 +36,7 @@ const Dashboard = () => {
       const added = await client.add(
         `user: ${user.get(
           "username"
-        )}; name: ${name}; timing: ${timing}; uid: ${uid}`
+        )}; name: ${name}; timing: ${timing}; lat: ${lat}, lng: ${lng} uid: ${uid}`
       );
       const url = `https://ipfs.infura.io/ipfs/${added.path}`;
       setUrl(url);

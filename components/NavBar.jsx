@@ -15,7 +15,7 @@ const NavBar = () => {
       <Link passHref href="/signup">
         <div className="flex gap-2 cursor-pointer">
           <img src="/static/images/user.svg" alt="" className="h-[24px]" />
-          <span>Sign Up</span>
+          <span>Sign Up / Login</span>
         </div>
       </Link>
     </div>

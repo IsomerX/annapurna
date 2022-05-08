@@ -2,7 +2,7 @@ import React from "react";
 
 const LocationCard = ({ uid, name, slots, lat, lng, timing, clicker }) => {
   const handleClick = () => {
-    clicker(uid, name, timing);
+    clicker(uid, name, timing, lat, lng);
   };
 
   return (

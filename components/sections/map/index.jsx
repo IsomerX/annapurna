@@ -39,6 +39,7 @@ const Map = ({ data }) => {
   return (
     <GoogleMap center={center} zoom={17} mapContainerClassName="w-full h-full">
       {markers}
+      {markers}
       {markers2}
       <Marker
         title={"The marker`s title will appear as a tooltip."}
