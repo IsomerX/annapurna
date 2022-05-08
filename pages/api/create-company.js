@@ -23,9 +23,6 @@ const companyMaker = (name, slots, lat, lng, timing) => {
   });
   temp
     .save()
-    .then((item) => {
-      console.log(item);
-    })
     .catch((err) => console.log(err));
 };
 

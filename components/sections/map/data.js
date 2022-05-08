@@ -1,4 +1,4 @@
-export const data = [
+export const data2 = [
     {
         name: "Royal Pepper Banquet(Krish)",
         lat : 28.699140,

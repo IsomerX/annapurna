@@ -12,7 +12,6 @@ const nftMaker = (uid) => {
 
   Company.updateOne({ uid }, { $inc: { slots: -1 } }, (err, res) => {
     if (err) console.log(err);
-    console.log(res);
   });
 
   Company.findOne({ uid }, (err, res) => {
@@ -22,12 +21,11 @@ const nftMaker = (uid) => {
 
   Company.deleteOne({ slots: 0 }, (err, res) => {
     if (err) console.log(err);
-    console.log(res);
   });
 };
 
 export default function handler(req, res) {
-  const uid = req.query.uid;
-  const response = nftMaker(155550180);
+  const uid = req.body.uid;
+  const response = nftMaker(uid);
   res.status(200).json({ response });
 }

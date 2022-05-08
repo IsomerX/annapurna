@@ -34,9 +34,6 @@ function Index() {
         <h2 className="m-auto">Loading ...</h2>
       )}
       {/* <DashboardMainPage /> */}
-      <div>
-        <button onClick={logout}>Logout</button>
-      </div>
     </div>
   );
 }
