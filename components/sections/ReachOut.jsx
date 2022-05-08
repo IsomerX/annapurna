@@ -9,7 +9,7 @@ const ReachOut = () => {
       <div className="pt-20 w-[60%] flex flex-col px-10">
         <img src="/static/images/quotecirc.svg" className="w-20 pb-14" alt="" />
         <div className="px-10">
-          <h1 className="text-5xl font-bold font-pop">Reach Out</h1>
+          <h2 className="text-5xl font-bold font-pop">Reach Out</h2>
           <p className="pt-10 font-sora">
             According to FAO estimates in 'The State of Food Security and
             Nutrition in the World', 2020 report, 189.2 million people are
