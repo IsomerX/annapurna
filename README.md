@@ -51,5 +51,5 @@ The challenges were big but not unsolvable. Due to this idea having very big asp
 -   Creating a strong logistic strategy to get people to the food and not let it go to waste.
 
 ## Important Links
-[Github Repository](https://github.com/IsomerX/annapurna)
-[Figma Project](https://www.figma.com/file/lwQJesvOoNRyQsmGljOZJ4/Annapurna?node-id=66%3A18)
+- [Github Repository](https://github.com/IsomerX/annapurna)
+- [Figma Project](https://www.figma.com/file/lwQJesvOoNRyQsmGljOZJ4/Annapurna?node-id=66%3A18)
