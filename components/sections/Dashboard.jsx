@@ -13,6 +13,10 @@ const Dashboard = () => {
       });
   }, []);
 
+  const cardHandler = (e) => {
+    
+  }
+
   let cards;
 
   if (data.length > 0) {
@@ -33,7 +37,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="w-full h-[50vh]">
-        <Map />
+        <Map data={data}/>
       </div>
     </div>
   );
