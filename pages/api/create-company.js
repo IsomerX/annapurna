@@ -30,6 +30,8 @@ const companyMaker = (name, slots, lat, lng, timing) => {
 };
 
 export default function handler(req, res) {
-  companyMaker("dhruv", 22, 33, 33, "8:00AM - 10:00PM");
+  const body = req.body;
+  companyMaker(body.name, body.slots, body.lat, body.lng, body.timing);
+  console.log(req.body);
   res.status(200).json({ status: "Done" });
 }
