@@ -34,3 +34,5 @@ yarn.lock
 artifacts/*
 cache/*
 package-lock.json
+
+backend/node_modules/*

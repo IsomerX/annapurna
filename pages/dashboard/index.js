@@ -5,7 +5,7 @@ import { useMoralis } from "react-moralis";
 import Router from "next/router";
 import Dashboard from "../../components/sections/Dashboard";
 
-function sleep(ms) {
+export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 

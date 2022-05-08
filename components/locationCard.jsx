@@ -7,7 +7,7 @@ const LocationCard = ({ uid, name, slots, lat, lng, timing, clicker }) => {
 
   return (
     <div
-      className="h-fit w-fit p-7 shadow-lg hover:shadow-xl transition-all rounded-lg flex flex-col gap-3"
+      className="h-fit w-fit p-7 shadow-lg hover:shadow-xl transition-all rounded-lg flex flex-col gap-3 hover:cursor-pointer"
       onClick={handleClick}
     >
       <div className="flex flex-col gap-2">
