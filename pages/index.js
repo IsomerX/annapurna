@@ -4,6 +4,7 @@ import Hero from '../components/sections/Hero'
 import LandingInfo from '../components/sections/LandingInfo'
 import ReachOut from '../components/sections/ReachOut'
 import Details from '../components/sections/Details'
+import Tokens from '../components/sections/Tokens'
 export default function Home() {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function Home() {
       <LandingInfo />
       <ReachOut />
       <Details />
+      <Tokens />
     </div>
   )
 }
