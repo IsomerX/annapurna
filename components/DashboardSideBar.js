@@ -23,7 +23,7 @@ const DashboardSideBar = ({ isActive }) => {
       />
 
       <span className="mx-auto my-4 font-pop font-bold text-xl">
-        {`${user.get("username").substring(0, 7)}...`}
+        {`${user && user.get("username").substring(0, 7)}...`}
       </span>
       <div className="option_box flex flex-col gap-8 mx-auto my-6 w-[80%] py-1 font-sora">
         <Link href="/calendar" passHref>
