@@ -18,20 +18,24 @@ const ReachOut = () => {
             this problem, we need support from NGOs all over the country to help
             in distribution of food from various sources.
           </p>
+          <Link passHref href="/signup">
+            <div className="flex gap-2 pt-10 underline text-xl cursor-pointer items-center">
+              <p className="text-xl">Become a part</p>
+              <img
+                src="/static/images/external link.svg"
+                className="w-4"
+                alt="Become a part"
+              />
+            </div>
+          </Link>
         </div>
-        <Link passHref href="/signup">
-          <div className="flex gap-2 pt-10 underline text-xl pl-5 cursor-pointer items-center">
-            <p>Become a part</p>
-            <img
-              src="/static/images/external link.svg"
-              className="w-4"
-              alt="Become a part"
-            />
-          </div>
-        </Link>
       </div>
       <div className="w-[40%]">
-        <img src="/static/images/hungry-kids.png" className="w-full" alt="kids are hungry"/>
+        <img
+          src="/static/images/hungry-kids.png"
+          className="w-full"
+          alt="kids are hungry"
+        />
       </div>
     </div>
   );

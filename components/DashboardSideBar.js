@@ -8,11 +8,13 @@ const DashboardSideBar = ({ isActive }) => {
   return (
     <div className="w-[30%] bg-white flex flex-col border-r-[2px] border-[#00000010]">
       {/* <span>logo</span> */}
-      <img
-        src="/static/images/logo_text_right_3.png"
-        alt=""
-        className="w-[40%] my-4 mx-auto"
-      />
+      <Link href="/" passHref>
+        <img
+          src="/static/images/logo_text_right_3.png"
+          alt=""
+          className="w-[40%] my-4 mx-auto hover:cursor-pointer"
+        />
+      </Link>
 
       <img
         src="/static/images/man_smiling.png"
