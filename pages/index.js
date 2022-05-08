@@ -18,8 +18,8 @@ export default function Home() {
       <Hero />
       <LandingInfo />
       <ReachOut />
-      <NumberCrunch />
       <Details />
+      <NumberCrunch />
       <Tokens />
     </div>
   )
