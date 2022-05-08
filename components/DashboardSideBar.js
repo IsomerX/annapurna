@@ -26,22 +26,22 @@ const DashboardSideBar = ({ isActive }) => {
         {`${user && user.get("username").substring(0, 7)}...`}
       </span>
       <div className="option_box flex flex-col gap-8 mx-auto my-6 w-[80%] py-1 font-sora">
-        <Link href="/calendar" passHref>
-          <div
-            className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
-              isActive === 0 && "bg-black text-white"
-            }`}
-          >
-            <div className="w-2/12 grid place-items-center">
-              <img
-                src="/static/images/calender_vector.png"
-                alt=""
-                className="h-[80%]"
-              />
-            </div>
-            <span className="text-xl text-center">Calender</span>
+        {/* <Link href="/calendar" passHref> */}
+        <div
+          className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
+            isActive === 0 && "bg-black text-white"
+          }`}
+        >
+          <div className="w-2/12 grid place-items-center">
+            <img
+              src="/static/images/calender_vector.png"
+              alt=""
+              className="h-[80%]"
+            />
           </div>
-        </Link>
+          <span className="text-xl text-center">Calender</span>
+        </div>
+        {/* </Link> */}
         <Link href="/dashboard" passHref>
           <div
             className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
@@ -58,22 +58,22 @@ const DashboardSideBar = ({ isActive }) => {
             <span className="text-xl text-center ">Dashboard</span>
           </div>
         </Link>
-        <Link href="/edit" passHref>
-          <div
-            className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
-              isActive === 2 && "bg-black text-white"
-            }`}
-          >
-            <div className="w-2/12 grid place-items-center">
-              <img
-                src="/static/images/edit_profile_vector.png"
-                alt=""
-                className="h-[80%]"
-              />
-            </div>
-            <span className="text-xl text-center">Edit Profile</span>
+        {/* <Link href="/edit" passHref> */}
+        <div
+          className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
+            isActive === 2 && "bg-black text-white"
+          }`}
+        >
+          <div className="w-2/12 grid place-items-center">
+            <img
+              src="/static/images/edit_profile_vector.png"
+              alt=""
+              className="h-[80%]"
+            />
           </div>
-        </Link>
+          <span className="text-xl text-center">Edit Profile</span>
+        </div>
+        {/* </Link> */}
         <Link href="/host" passHref>
           <div
             className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
