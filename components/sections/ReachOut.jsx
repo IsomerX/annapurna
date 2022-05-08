@@ -30,7 +30,7 @@ const ReachOut = () => {
           </Link>
         </div>
       </div>
-      <div className="w-[40%]">
+      <div className="w-[45%]">
         <img
           src="/static/images/hungry-kids.png"
           className="w-full"
