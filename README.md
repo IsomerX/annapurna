@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+In September 2015, world leaders at the United Nations General Assembly pledged to drastically transform the world by 2030. Poor people, homeless parents with children are seen living in horrible conditions. While many are blessed with food on the table, millions are still struggling to manage one square meal for their families. We at Annapurna are determined to help the hungry by bringing them to a place where they would not have to feel like going to bed on an empty stomach.
 
-First, run the development server:
+## WHO ARE WE
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+We at Annapurna plan to make a portal where different banquet halls, party halls, etc where a lot of food is wasted and connect them to the people who can’t even afford 2 square meals a day. We plan to minimize food wastage and connect those in need.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## WHY JOIN US
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+  
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+According to FAO estimates in ‘The State of Food Security and Nutrition in the World, 2020 report, 189.2 million people are undernourished in India. By this measure, 14% of the population is undernourished in India. We plan to change this. However, to tackle this problem, we need support from NGOs all over the country to help in distribution of food from various sources.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  
 
-## Learn More
+The total number of slots available for a hall is published by individual halls on a daily basis. Each user has 6 Tokens in total. A user can choose to visit any location and this would cost 1 token, in exchange they get a ticket for the given slot. This way users can book slots.
 
-To learn more about Next.js, take a look at the following resources:
+  
+Currently, about 189.6 million people in India go to bed without two square meals a day. We plan to tackle this by creating a portal where people can book slots for party halls and banquets. We plan to minimize food wastage and connect those in need.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Our app works on the concept of bringing those who require food to the institutions that are willing to give it. We have used the concepts of Web3, polygon, moralis, Metamask wallet, mongoDB to implement the backbone and the backend of the project.
 
-## Deploy on Vercel
+  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To do this, we would require support from Local NGOs, to help the people get added to the platform and to assist them in getting tokens and tickets. These tickets are presented as NFTs and can be used for verification.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  
+
+### Technologies
+    
+
+Tailwind CSS, React, Next.Js, MongoDB, Polygon, Moralis, MetaMask, HardHat, Web3, Figma
+
+### Challenges we ran into
+    
+
+  
+
+The challenges were big but not unsolvable. Due to this idea having very big aspirations and goals, we achieved major milestones in our project and the entire team learned a lot along the way.
+
+-   We had to learn the working of smart contracts and how web3 actually works.
+    
+-   Using moralis to implement the Web3 infrastructure.
+    
+-   Generating and posting NFTs in a way its authenticity can be maintained.
+    
+-   A robust design to encompass the whole idea of the platform.
+    
+-   Creating a strong logistic strategy to get people to the food and not let it go to waste.
