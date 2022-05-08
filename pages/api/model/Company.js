@@ -10,6 +10,6 @@ const company = new schema({
   timing: String,
 });
 
-const Company = mongoose.model("companies", company);
+const Company = mongoose.models.companies || mongoose.model("companies", company) ;
 
 module.exports = Company;

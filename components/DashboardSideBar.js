@@ -25,7 +25,7 @@ const DashboardSideBar = ({ isActive }) => {
         <Link href="/calendar" passHref>
           <div
             className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
-              isActive === 0 && "bg-black"
+              isActive === 0 && "bg-black text-white"
             }`}
           >
             <div className="w-2/12 grid place-items-center">
@@ -41,7 +41,7 @@ const DashboardSideBar = ({ isActive }) => {
         <Link href="/dashboard" passHref>
           <div
             className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
-              isActive === 1 && "bg-black"
+              isActive === 1 && "bg-black text-white"
             }`}
           >
             <div className="w-2/12 grid place-items-center">
@@ -51,13 +51,13 @@ const DashboardSideBar = ({ isActive }) => {
                 className="h-[80%]"
               />
             </div>
-            <span className="text-xl text-center text-white">Dashboard</span>
+            <span className="text-xl text-center ">Dashboard</span>
           </div>
         </Link>
         <Link href="/edit" passHref>
           <div
             className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
-              isActive === 2 && "bg-black"
+              isActive === 2 && "bg-black text-white"
             }`}
           >
             <div className="w-2/12 grid place-items-center">
@@ -68,6 +68,22 @@ const DashboardSideBar = ({ isActive }) => {
               />
             </div>
             <span className="text-xl text-center">Edit Profile</span>
+          </div>
+        </Link>
+        <Link href="/host" passHref>
+          <div
+            className={`flex gap-6 w-full py-3 items-center px-4 cursor-pointer rounded-lg ${
+              isActive === 3 && "bg-black text-white"
+            }`}
+          >
+            <div className="w-2/12 grid place-items-center">
+              <img
+                src="/static/images/edit_profile_vector.png"
+                alt=""
+                className="h-[80%]"
+              />
+            </div>
+            <span className="text-xl text-center">Host</span>
           </div>
         </Link>
       </div>
