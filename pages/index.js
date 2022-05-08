@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar'
 import Hero from '../components/sections/Hero'
 import LandingInfo from '../components/sections/LandingInfo'
 import ReachOut from '../components/sections/ReachOut'
+import NumberCrunch from '../components/sections/NumberCrunch'
 import Details from '../components/sections/Details'
 import Tokens from '../components/sections/Tokens'
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <LandingInfo />
       <ReachOut />
       <Details />
+      <NumberCrunch />
       <Tokens />
     </div>
   )
